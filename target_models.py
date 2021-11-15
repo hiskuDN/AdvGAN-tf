@@ -154,6 +154,7 @@ class Target:
 from keras.datasets import cifar10
 
 if __name__ == '__main__':
+	tf.disable_v2_behavior()
 	(X,y), (X_test,y_test) = mnist.load_data()
 	X = np.divide(X, 255.0)
 	X_test = np.divide(X_test, 255.0)
